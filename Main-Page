@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>iGEM</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<style>
+
+	#home_logo, #sideMenu { display:none; }
+	#sideMenu, #top_title, .patrollink  {display:none;}
+	#content { margin-left:0px; margin-top:-7px; padding:0px; width:100%;}
+	body {background-color:white; }
+	#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+
+</style>
+<body bgcolor="#002855" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table id="Table_01" width=100% height=100% border="0" cellpadding="0" cellspacing="0">
+
+	<tr>
+			<img src="http://2018.igem.org/wiki/images/1/13/T--UC_Davis--iGEM-trial1_03.png" width=100% height=100% alt=""></td>
+	</tr>
+
+</table>
+<!-- End Save for Web Slices -->
+</body>
+</html>
