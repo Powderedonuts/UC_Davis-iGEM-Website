@@ -114,7 +114,7 @@
 <body>
 	<div class="banner">
 		<div class="logos" style="background-color: #002855;">
-			<img src="http://2018.igem.org/wiki/images/a/a5/T--UC_Davis--whitelogo.png" alt="uc davis logo" style="margin-left: auto;margin-right:auto;" width="264.6px" ; Padding: "0";>
+			<a href="http://ucdavis.com"><img src="http://2018.igem.org/wiki/images/a/a5/T--UC_Davis--whitelogo.png" alt="uc davis logo" style="margin-left: auto;margin-right:auto;" width="264.6px" ; Padding: "0";></a>
 		</div>
 
 		<!--_____________Cenozoic logo_____________-->
@@ -127,7 +127,7 @@
 		<!--______________iGEM logo____________-->
 
 		<div class="logos" style="background-color: #002855">
-			<img src="http://2018.igem.org/wiki/images/2/2b/T--UC_Davis--iGEM.png" alt="uc davis logo" style="margin-left: auto;margin-right: auto; " width="201.6px" ; Padding: "0";>
+			<a href="http://2018.igem.org"><img src="http://2018.igem.org/wiki/images/2/2b/T--UC_Davis--iGEM.png" alt="uc davis logo" style="margin-left: auto;margin-right: auto; " width="201.6px" ; Padding: "0";></a>
 		</div>
 	</div>
 
