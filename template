@@ -3,10 +3,6 @@
   <title>iGEM</title>
 </head>
 <style>
-  body {
-    background-color: #002855;
-  }
-
   /*------------Get rid of iGEM stuff----------------------------------*/
 
   #home_logo,
@@ -29,19 +25,111 @@
 
   /*-------------------------------------------------------------------*/
 
+/*----------------------Header Styling-------------------------*/
+
+.header {
+  overflow: hidden;
+  background-color: #002855;
+  padding: 20px 10px;
+  width: 100%;
+}
+
+.dropdown-main, .nav-item, .logo {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/**/
+
+#topnav li {
+  display: inline-block;
+}
+  .dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 150px;
+    min-height: 150px;
+		margin-left: 30px;
+	}
+  .dropdown:hover .dropdown-content {
+		display: block;
+	}
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  margin: 0;
+}
+
 
 </style>
 <body>
   <!--______________Top Navigation Bar____________-->
-  <ul id="topnav">
-    <li><a href="Project">Project</a></li>
-    <li><a href="Human_Practices">Human Practices</a></li>
-    <li><a href="Tools">Tools</a></li>
-    <li><a href="Safety">Safety</a></li>
-    <li><a href="Acknowledgements">Acknowledgements</a></li>
-    <li><a href="iGEM">iGEM</a></li>
-  </ul>
-
+  <div class="header">
+    <a href="#" class="logo">Cenozoic</a>
+  	<ul id="topnav">
+  		<li class="dropdown"><a href="Project" class="dropdown-main">Project</a>
+  			<div class="dropdown-content">
+  				<a href="#">Link 1</a>
+  				<a href="#">Link 2</a>
+  				<a href="#">Link 3</a>
+  			</div>
+  		</li>
+  		<li class="dropdown"><a href="Practices" class="dropdown-main">Practices</a>
+  			<div class="dropdown-content">
+  				<a href="#">Link 1</a>
+  				<a href="#">Link 2</a>
+  				<a href="#">Link 3</a>
+  			</div>
+  		</li>
+  		<li class="dropdown"><a href="Tools" class="dropdown-main">Tools</a>
+  			<div class="dropdown-content">
+  				<a href="#">Link 1</a>
+  				<a href="#">Link 2</a>
+  				<a href="#">Link 3</a>
+  			</div>
+  		</li>
+  		<li class="dropdown"><a href="Acknowledgements" class="dropdown-main">Acknowledgements</a>
+  			<div class="dropdown-content">
+  				<a href="#">Link 1</a>
+  				<a href="#">Link 2</a>
+  				<a href="#">Link 3</a>
+  			</div>
+  		</li>
+  		<li class="no-dropdown"><a href="Safety" class="nav-item">Safety</a></li>
+  		<li class="no-dropdown"><a href="iGEM" class="nav-item">iGEM</a></li>
+  	</ul>
+  	<!--_________________________________________________________-->
+  </div>
 </body>
 
 
