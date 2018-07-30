@@ -51,10 +51,6 @@
 }
 
 
-.header-right {
-  float: right;
-}
-
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -66,9 +62,14 @@
   }
 }
 /**/
-
+#topnav {
+  text-align: center;
+}
 #topnav li {
   display: inline-block;
+}
+#topnav a:visited {
+  color: white;
 }
   .dropdown-content {
 		display: none;
@@ -95,7 +96,6 @@
 <body>
   <!--______________Top Navigation Bar____________-->
   <div class="header">
-    <a href="#" class="logo">Cenozoic</a>
   	<ul id="topnav">
   		<li class="dropdown"><a href="Project" class="dropdown-main">Project</a>
   			<div class="dropdown-content">
@@ -118,6 +118,7 @@
   				<a href="#">Link 3</a>
   			</div>
   		</li>
+      <li class="dropdown"><img src="http://2018.igem.org/wiki/images/7/73/T--UC_Davis--anchor.png" alt="baby logo awwww so cute" width="130"><a href="#" class="logo">Cenozoic</a></li>
   		<li class="dropdown"><a href="Acknowledgements" class="dropdown-main">Acknowledgements</a>
   			<div class="dropdown-content">
   				<a href="#">Link 1</a>
