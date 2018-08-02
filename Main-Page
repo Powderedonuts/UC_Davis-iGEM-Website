@@ -5,7 +5,7 @@
 </head>
 <style>
 	body {
-		background-color: #002855;
+		background-color: white;
 	}
 
 	/*------------Get rid of iGEM stuff----------------------------------*/
@@ -49,6 +49,10 @@
 		width: 220px;
 	}
 
+	#topnav li a:hover {
+		text-decoration: none;
+	}
+
 	#topnav a:visited {
 		color: white;
 	}
@@ -58,11 +62,7 @@
 		text-decoration: none;
 		font-size: 20px;
 		color: white;
-		 /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-	}
-
-	.no-dropdown {
-		text-decoration: none;
+		/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 	}
 
 	.dropdown-content {
@@ -71,7 +71,12 @@
 		background-color: #f9f9f9;
 		min-width: 150px;
 		margin-left: 30px;
-    border-radius:7px;
+		border-radius: 7px;
+		z-index: 1;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
 	}
 
 	.dropdown-content a {
@@ -80,16 +85,11 @@
 		text-decoration: none;
 		display: block;
 		text-align: left;
-    font-weight: bold;
+		font-weight: bold;
 	}
-  .dropdown-content a:hover {
-    color: black;
-}
-#topnav li a:hover {
-		text-decoration: none;
-	}
-	.dropdown:hover .dropdown-content {
-		display: block;
+
+	.dropdown-content a:hover {
+		color: black;
 	}
 
 	/*--------------------------------*/
@@ -110,28 +110,55 @@
 	}
 
 	/*--------------------------------*/
+
+	/*---------Triangle Styling and Spacing-----------*/
+
+	.triangle {
+		background-color: #002855;
+		width: 100%;
+		position: absolute;
+		margin: 0;
+	}
+
+	.triangle:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-bottom: 10%;
+		background-color: #002855;
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	}
+
+	.spacer {
+		height: 10vw;
+	}
+
+	/*------------------------------------------------*/
+
+	h1 {
+		color: #d9a900;
+		text-align: center;
+	}
+
 </style>
 
 <body>
 	<div class="banner">
+		<!--_____________Davis logo_____________-->
 		<div class="logos" style="background-color: #002855;">
 			<a href="http://ucdavis.com"><img src="http://2018.igem.org/wiki/images/a/a5/T--UC_Davis--whitelogo.png" alt="uc davis logo" style="margin-left: auto;margin-right:auto;" width="264.6px" ; Padding: "0";></a>
 		</div>
-
 		<!--_____________Cenozoic logo_____________-->
-
 		<div class="logos" style="background-color: #002855">
 			<img src="http://2018.igem.org/wiki/images/1/1b/T--UC_Davis--DNA_refined.png" alt="Cenozoic logo" style="margin-left: auto;margin-right: auto;" width="543.6px" ; Padding: "0";>
 		</div>
-
-
 		<!--______________iGEM logo____________-->
-
 		<div class="logos" style="background-color: #002855">
 			<a href="http://2018.igem.org"><img src="http://2018.igem.org/wiki/images/2/2b/T--UC_Davis--iGEM.png" alt="uc davis logo" style="margin-left: auto;margin-right: auto; " width="201.6px" ; Padding: "0";></a>
 		</div>
 	</div>
-
 	<!--______________Top Navigation Bar_________________________-->
 	<ul id="topnav">
 		<li class="dropdown"><a href="Project" class="dropdown-main">Project</a>
@@ -166,16 +193,23 @@
 		<li class="no-dropdown"><a href="iGEM" class="nav-item">iGEM</a></li>
 	</ul>
 	<!--_________________________________________________________-->
-
-
-
-	<div class="Motivation Draft">
+	<!--______Triangle and Spacing______-->
+	<div class="triangle"></div>
+	<div class="spacer"></div>
+	<!--________________________________-->
+	<div class="Motivation">
 		<h1>Mammilian Cell Based Biosensor For Physiological Effects Of Toxins</h1>
 		<p>After visiting the Yurok Tribe, it became clear that to have a real positive impact regarding their problems with pollution and health, it would be necessary to draw a clear narrative between sources of pollution, a specific toxin in the environment,
 			a high quality field test, a causal effect on human health, and a specific policy change. Polluters –> Environment (Field Test) –> Human Disease –> Policy Change –| Polluters For best outcomes, every link in this chain needs to be well documented and
 			backed by substantial evidence/data. It needs to be clear which organizations are responsible for introducing which toxins into the environment, that they are present in meaningful concentrations in the environment, that these toxins have a known causal
 			effect on human disease, and what set of policy changes can help improve public health.</p>
 	</div>
+	<div class="Process">
+		<h1>Process</h1>
+		<p> After initially focusing on the possibility of developing a new field test to help detect COCs in the environment, upon further research, it was determined that the current state of the art field tests, ELISA immunoassays, are of high quality and effectiveness.
+			In light of this finding, we determined that our efforts were best spent studying the effect of COCs, including chemicals which have not been previously studied in detail, on the physiological health of mammalian cells.</p>
+	</div>
 </body>
 
 </html>
+{{Template: UC_Davis/footer}}
