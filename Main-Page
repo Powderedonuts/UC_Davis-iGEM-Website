@@ -38,14 +38,13 @@
 		background-color: #002855;
 		margin: 0;
 		text-align: center;
+
 	}
 
 	#topnav li {
-		display: table-cell;
-		text-decoration: none;
 		display: inline-block;
 		line-height: 50px;
-		width: 15%;
+		width: 13%;
 		min-width: 150px;
 	}
 
@@ -91,10 +90,23 @@
 	.dropdown-content a:hover {
 		color: black;
 	}
+	#topnav .no-show  {
+		display: none;
+	}
+	@media screen and (max-width:1000px) {
+  #topnav li:not(:first-child) {display: none;}
+	#topnav li {
+		width: 50%;
+	}
+  #topnav li.burger {
+    display: inline-block;
+  }
+}
 
 	/*--------------------------------*/
 
 	/*-----Styling the 3 logos-----*/
+
 
 	.logos {
 		display: inline-block;
@@ -166,8 +178,8 @@
 		color: white;
 	}
 	.words {
-		margin-left: 200px;
-		margin-right: 200px;
+		margin-left: 10%;
+		margin-right: 10%;
 		font-size: 18px;
 		padding-bottom: 20px;
 	}
@@ -189,7 +201,8 @@
 		</div>
 	</div>
 	<!--______________Top Navigation Bar_________________________-->
-	<ul id="topnav">
+	<ul class="topnav" id="topnav">
+		<li class="no-dropdown"><a href="Home" class="nav-item">Home</a></li>
 		<li class="dropdown"><a href="Project" class="dropdown-main">Project</a>
 			<div class="dropdown-content">
 				<a href="#">Link 1</a>
@@ -219,7 +232,15 @@
 			</div>
 		</li>
 		<li class="no-dropdown"><a href="Safety" class="nav-item">Safety</a></li>
-		<li class="no-dropdown"><a href="iGEM" class="nav-item">iGEM</a></li>
+		<li class="no-dropdown no-show"><a href="iGEM" class="nav-item">iGEM</a></li>
+		<li class="no-dropdown no-show"><a href="UC_Davis" class="nav-item">UC Davis</a></li>
+		<li class="burger no-show "><a href="javascript:void(0);" class="nav-item">&#9776;</a>
+			<div class="dropdown-content">
+				<a href="#">Link 1</a>
+				<a href="#">Link 2</a>
+				<a href="#">Link 3</a>
+			</div>
+</li>
 	</ul>
 	<!--_________________________________________________________-->
 	<!--______Triangle and Spacing______-->
