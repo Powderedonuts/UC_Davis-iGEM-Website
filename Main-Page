@@ -33,27 +33,24 @@
 	/*----Top Navigation Styling-----*/
 
 	#topnav {
-		display: table;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: nowrap;
 		width: 100%;
 		background-color: #002855;
 		margin: 0;
-		text-align: center;
-
-	}
-
-	#topnav li {
-		display: inline-block;
-		line-height: 50px;
-		width: 13%;
-		min-width: 150px;
+		list-style: none;
 	}
 
 	#topnav li a:hover {
 		text-decoration: none;
 	}
 
-	#topnav a:visited {
+	#topnav .nav-item:visited {
 		color: white;
+	}
+	#topnav .b-nav-item:visited {
+		color: #525b65;
 	}
 
 	.dropdown-main,
@@ -68,10 +65,9 @@
 		position: absolute;
 		background-color: #f9f9f9;
 		min-width: 150px;
-		margin-left: 30px;
 		border-radius: 7px;
 		z-index: 1;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 	}
 
 	.dropdown:hover .dropdown-content {
@@ -90,34 +86,93 @@
 	.dropdown-content a:hover {
 		color: black;
 	}
-	#topnav .no-show  {
+	/*-----------Burger Menu Styling-------------*/
+
+	#topnav .burger {
+		display: none;
+		float: right;
+		color: white;
+		font-size: 18px;
+	}
+	#topnav .b-dropdown-content {
 		display: none;
 	}
-	@media screen and (max-width:1000px) {
-  #topnav li:not(:first-child) {display: none;}
-	#topnav li {
-		width: 50%;
-	}
-  #topnav li.burger {
-    display: inline-block;
-  }
-}
 
-	/*--------------------------------*/
+	@media screen and (max-width:1000px) {
+		#topnav li {
+			display: none;
+		}
+		#topnav {
+			justify-content: center;
+		}
+		#topnav li.burger {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	.burger-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		border-radius: 7px;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		width: 400px;
+		margin-top: 40px;
+	}
+	.burger-content div, .burger-content a {
+	text-decoration: none;
+	color: #525b65;
+	padding: 6px 8px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	font-weight: bold;
+
+	}
+	#topnav .b-dropdown:hover .b-dropdown-content {
+		display: inline-block;
+	}
+	#topnav .b-dropdown-content a:hover {
+		color: black;
+	}
+	#topnav .b-dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 150px;
+		margin-top: -50px;
+		margin-left: 200px;
+		z-index: 1;
+	}
+	#topnav .b-Acknowledgements div {
+		margin-top: -124px;
+	}
+	input[type=checkbox]{
+		display: none;
+	}
+	input[type=checkbox]:checked ~ .burger-content {
+    display: block
+}
+	/*-------------------------------------------*/
+	/*-------------------------------------------*/
 
 	/*-----Styling the 3 logos-----*/
 
-
 	.logos {
-		display: inline-block;
+
 		background-color: #002855;
-		padding: 50px;
+		width: 100%;
+		text-align: center;
 	}
 
 	.banner {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
 		background-color: #002855;
-		text-align: center;
-		margin-left: -52px;
 	}
 
 	/*--------------------------------*/
@@ -141,6 +196,7 @@
 		background-color: #002855;
 		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 	}
+
 	.trianglew {
 		background-color: white;
 		width: 100%;
@@ -162,6 +218,7 @@
 	.spacer {
 		height: 10vw;
 	}
+
 	.spacerb {
 		height: 10vw;
 		background-color: #002855;
@@ -173,10 +230,12 @@
 		color: #d9a900;
 		text-align: center;
 	}
+
 	.B {
 		background-color: #002855;
 		color: white;
 	}
+
 	.words {
 		margin-left: 10%;
 		margin-right: 10%;
@@ -189,20 +248,19 @@
 	<div class="banner">
 		<!--_____________Davis logo_____________-->
 		<div class="logos" style="background-color: #002855;">
-			<a href="http://ucdavis.com"><img src="http://2018.igem.org/wiki/images/a/a5/T--UC_Davis--whitelogo.png" alt="uc davis logo" style="margin-left: auto;margin-right:auto;" width="264.6px" ; Padding: "0";></a>
+			<a href="http://ucdavis.com"><img src="http://2018.igem.org/wiki/images/a/a5/T--UC_Davis--whitelogo.png" alt="uc davis logo"  width="35%" ;></a>
 		</div>
 		<!--_____________Cenozoic logo_____________-->
 		<div class="logos" style="background-color: #002855">
-			<img src="http://2018.igem.org/wiki/images/1/1b/T--UC_Davis--DNA_refined.png" alt="Cenozoic logo" style="margin-left: auto;margin-right: auto;" width="543.6px" ; Padding: "0";>
+			<img src="http://2018.igem.org/wiki/images/1/1b/T--UC_Davis--DNA_refined.png" alt="Cenozoic logo"  width="65%" ;>
 		</div>
 		<!--______________iGEM logo____________-->
 		<div class="logos" style="background-color: #002855">
-			<a href="http://2018.igem.org"><img src="http://2018.igem.org/wiki/images/2/2b/T--UC_Davis--iGEM.png" alt="uc davis logo" style="margin-left: auto;margin-right: auto; " width="201.6px" ; Padding: "0";></a>
+			<a href="http://2018.igem.org"><img src="http://2018.igem.org/wiki/images/2/2b/T--UC_Davis--iGEM.png" alt="uc davis logo"  width="35%" ;></a>
 		</div>
 	</div>
 	<!--______________Top Navigation Bar_________________________-->
-	<ul class="topnav" id="topnav">
-		<li class="no-dropdown"><a href="Home" class="nav-item">Home</a></li>
+	<ul = id="topnav">
 		<li class="dropdown"><a href="Project" class="dropdown-main">Project</a>
 			<div class="dropdown-content">
 				<a href="#">Link 1</a>
@@ -232,16 +290,43 @@
 			</div>
 		</li>
 		<li class="no-dropdown"><a href="Safety" class="nav-item">Safety</a></li>
-		<li class="no-dropdown no-show"><a href="iGEM" class="nav-item">iGEM</a></li>
-		<li class="no-dropdown no-show"><a href="UC_Davis" class="nav-item">UC Davis</a></li>
-		<li class="burger no-show "><a href="javascript:void(0);" class="nav-item">&#9776;</a>
-			<div class="dropdown-content">
-				<a href="#">Link 1</a>
-				<a href="#">Link 2</a>
-				<a href="#">Link 3</a>
+	<!--___________________________________Burger Menu____________________________________________-->
+		<li class="burger"><input type="checkbox" id="b-control"><label for="b-control">&#9776;</label>
+			<div class="burger-content">
+				<div class="b-dropdown"><a href="Project" class="b-dropdown-main">Project</a>
+					<div class="b-dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+				<div class="b-dropdown"><a href="Practices" class="b-dropdown-main">Practices</a>
+					<div class="b-dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+				<div class="b-dropdown"><a href="Tools" class="b-dropdown-main">Tools</a>
+					<div class="b-dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+				<div class="b-dropdown b-Acknowledgements"><a href="Acknowledgements" class="b-dropdown-main">Acknowledgements</a>
+					<div class="b-dropdown-content">
+						<a href="#">Link 1</a>
+						<a href="#">Link 2</a>
+						<a href="#">Link 3</a>
+					</div>
+				</div>
+				<div class="b-no-dropdown"><a href="Safety" class="b-nav-item">Safety</a></div>
 			</div>
-</li>
+		</li>
 	</ul>
+	<!--__________________________________________________________________________________________-->
+
 	<!--_________________________________________________________-->
 	<!--______Triangle and Spacing______-->
 	<div class="triangle"></div>
@@ -268,23 +353,26 @@
 	<div class="triangle"></div>
 	<div class="spacer"></div>
 	<!--________________________________-->
-<img src="http://2018.igem.org/wiki/images/a/a1/T--UC_Davis--Jolee.jpg" alt="Jolee!">
-<!--______Triangle and Spacing______-->
-<div class="trianglew"></div>
-<div class="spacerb"></div>
-<!--________________________________-->
-<div class="Limitations B">
-	<h1 class="heading">Limitations</h1>
-	<div class="words">A limitation of our research is that we will not be able to show a definitive causal link between COCs and human disease, but it is our intention to find links between COCs and physiological stress in mammalian systems, with the hope that our findings may motivate and inform further studies to find out if there is a causal link between these COCs and human disease.</div>
-</div>
-<!--______Triangle and Spacing______-->
-<div class="triangle"></div>
-<div class="spacer"></div>
-<!--________________________________-->
-<div>
-	<h1 class="heading">Extension</h1>
-	<div class="words">A possible extension of our research would be to determine the effect of multiple COCs on the physiological health of mammalian cells. This would be of value in assessing and creating sane standards for pollution, as organisms in the natural environment are exposed to a variety of COCs at once, which may not have been previously screened in conjunction with each other. A possible finding from this might be that COC “A,” at a concentration below what is currently considered to be harmful, in the presence of COC “B,” also at a concentration below what is currently considered to be harmful, interact together to trigger a response associated with stress in mammalian cells.</div>
-</div>
+	<img src="http://2018.igem.org/wiki/images/a/a1/T--UC_Davis--Jolee.jpg" alt="Jolee!">
+	<!--______Triangle and Spacing______-->
+	<div class="trianglew"></div>
+	<div class="spacerb"></div>
+	<!--________________________________-->
+	<div class="Limitations B">
+		<h1 class="heading">Limitations</h1>
+		<div class="words">A limitation of our research is that we will not be able to show a definitive causal link between COCs and human disease, but it is our intention to find links between COCs and physiological stress in mammalian systems, with the hope that our findings
+			may motivate and inform further studies to find out if there is a causal link between these COCs and human disease.</div>
+	</div>
+	<!--______Triangle and Spacing______-->
+	<div class="triangle"></div>
+	<div class="spacer"></div>
+	<!--________________________________-->
+	<div>
+		<h1 class="heading">Extension</h1>
+		<div class="words">A possible extension of our research would be to determine the effect of multiple COCs on the physiological health of mammalian cells. This would be of value in assessing and creating sane standards for pollution, as organisms in the natural environment
+			are exposed to a variety of COCs at once, which may not have been previously screened in conjunction with each other. A possible finding from this might be that COC “A,” at a concentration below what is currently considered to be harmful, in the presence
+			of COC “B,” also at a concentration below what is currently considered to be harmful, interact together to trigger a response associated with stress in mammalian cells.</div>
+	</div>
 </body>
 
 </html>
