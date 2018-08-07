@@ -38,7 +38,6 @@
 		background-color: #002855;
 		margin: 0;
 		text-align: center;
-		white-space: nowrap;
 	}
 
 	#topnav li {
@@ -46,7 +45,8 @@
 		text-decoration: none;
 		display: inline-block;
 		line-height: 50px;
-		width: 220px;
+		width: 15%;
+		min-width: 150px;
 	}
 
 	#topnav li a:hover {
@@ -62,7 +62,6 @@
 		text-decoration: none;
 		font-size: 20px;
 		color: white;
-		/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
 	}
 
 	.dropdown-content {
@@ -73,6 +72,7 @@
 		margin-left: 30px;
 		border-radius: 7px;
 		z-index: 1;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	}
 
 	.dropdown:hover .dropdown-content {
@@ -105,8 +105,7 @@
 	.banner {
 		background-color: #002855;
 		text-align: center;
-		margin-left: -50px;
-		white-space: nowrap;
+		margin-left: -52px;
 	}
 
 	/*--------------------------------*/
@@ -130,9 +129,30 @@
 		background-color: #002855;
 		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
 	}
+	.trianglew {
+		background-color: white;
+		width: 100%;
+		position: absolute;
+		margin: 0;
+	}
+
+	.trianglew:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		padding-bottom: 10%;
+		background-color: white;
+		clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+	}
 
 	.spacer {
 		height: 10vw;
+	}
+	.spacerb {
+		height: 10vw;
+		background-color: #002855;
 	}
 
 	/*------------------------------------------------*/
@@ -141,7 +161,16 @@
 		color: #d9a900;
 		text-align: center;
 	}
-
+	.B {
+		background-color: #002855;
+		color: white;
+	}
+	.words {
+		margin-left: 200px;
+		margin-right: 200px;
+		font-size: 18px;
+		padding-bottom: 20px;
+	}
 </style>
 
 <body>
@@ -197,18 +226,44 @@
 	<div class="triangle"></div>
 	<div class="spacer"></div>
 	<!--________________________________-->
-	<div class="Motivation">
-		<h1>Mammilian Cell Based Biosensor For Physiological Effects Of Toxins</h1>
-		<p>After visiting the Yurok Tribe, it became clear that to have a real positive impact regarding their problems with pollution and health, it would be necessary to draw a clear narrative between sources of pollution, a specific toxin in the environment,
+	<div class="Motivation W">
+		<h1 class="heading">Mammilian Cell Based Biosensor For Physiological Effects Of Toxins</h1>
+		<div class="words">After visiting the Yurok Tribe, it became clear that to have a real positive impact regarding their problems with pollution and health, it would be necessary to draw a clear narrative between sources of pollution, a specific toxin in the environment,
 			a high quality field test, a causal effect on human health, and a specific policy change. Polluters –> Environment (Field Test) –> Human Disease –> Policy Change –| Polluters For best outcomes, every link in this chain needs to be well documented and
 			backed by substantial evidence/data. It needs to be clear which organizations are responsible for introducing which toxins into the environment, that they are present in meaningful concentrations in the environment, that these toxins have a known causal
-			effect on human disease, and what set of policy changes can help improve public health.</p>
+			effect on human disease, and what set of policy changes can help improve public health.</div>
 	</div>
-	<div class="Process">
-		<h1>Process</h1>
-		<p> After initially focusing on the possibility of developing a new field test to help detect COCs in the environment, upon further research, it was determined that the current state of the art field tests, ELISA immunoassays, are of high quality and effectiveness.
-			In light of this finding, we determined that our efforts were best spent studying the effect of COCs, including chemicals which have not been previously studied in detail, on the physiological health of mammalian cells.</p>
+	<!--______Triangle and Spacing______-->
+	<div class="trianglew"></div>
+	<div class="spacerb"></div>
+	<!--________________________________-->
+
+	<div class="Process B">
+		<h1 class="heading">Process</h1>
+		<div class="words"> After initially focusing on the possibility of developing a new field test to help detect COCs in the environment, upon further research, it was determined that the current state of the art field tests, ELISA immunoassays, are of high quality and effectiveness.
+			In light of this finding, we determined that our efforts were best spent studying the effect of COCs, including chemicals which have not been previously studied in detail, on the physiological health of mammalian cells.</div>
 	</div>
+	<!--______Triangle and Spacing______-->
+	<div class="triangle"></div>
+	<div class="spacer"></div>
+	<!--________________________________-->
+<img src="http://2018.igem.org/wiki/images/a/a1/T--UC_Davis--Jolee.jpg" alt="Jolee!">
+<!--______Triangle and Spacing______-->
+<div class="trianglew"></div>
+<div class="spacerb"></div>
+<!--________________________________-->
+<div class="Limitations B">
+	<h1 class="heading">Limitations</h1>
+	<div class="words">A limitation of our research is that we will not be able to show a definitive causal link between COCs and human disease, but it is our intention to find links between COCs and physiological stress in mammalian systems, with the hope that our findings may motivate and inform further studies to find out if there is a causal link between these COCs and human disease.</div>
+</div>
+<!--______Triangle and Spacing______-->
+<div class="triangle"></div>
+<div class="spacer"></div>
+<!--________________________________-->
+<div>
+	<h1 class="heading">Extension</h1>
+	<div class="words">A possible extension of our research would be to determine the effect of multiple COCs on the physiological health of mammalian cells. This would be of value in assessing and creating sane standards for pollution, as organisms in the natural environment are exposed to a variety of COCs at once, which may not have been previously screened in conjunction with each other. A possible finding from this might be that COC “A,” at a concentration below what is currently considered to be harmful, in the presence of COC “B,” also at a concentration below what is currently considered to be harmful, interact together to trigger a response associated with stress in mammalian cells.</div>
+</div>
 </body>
 
 </html>
