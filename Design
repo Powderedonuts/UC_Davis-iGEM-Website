@@ -1,9 +1,144 @@
-{{UC_Davis}}
+{{UC_Davis}} {{Template: UC_Davis/header}}
 <html>
+
 <head>
-  <style></style>
+  <style>
+    body {
+      background-color: white;
+    }
+    ul {
+      list-style: none;
+    }
+    h1, h2 {
+      color: #d9a900;
+      text-align: center;
+    }
+
+    .content {
+      margin-left: 10%;
+      margin-right: 10%;
+      font-size: 18px;
+      padding-bottom: 20px;
+    }
+
+  </style>
 </head>
+
 <body>
-  
-</body>
+  <div class="intro">
+    <h1>Project Design</h1>
+    <br><br><br>
+  </div>
+  <ul class="content-box">
+    <li class="content">
+      <h2>Background</h2>
+      <p><b>Superfund Program</b>
+        <br><br>The United States Environmental Protection Agency (EPA) is the government agency responsible for protection of the natural environment and human health [1]. In 1980, Congress formed the Comprehensive Environmental Response, Compensation
+        and Liability Act (CERCLA), more commonly referred to as the Superfund program. The Superfund program identified the most hazardous, contaminated sites in the United States, and marked them as priorities for clean-up, giving the EPA the authority
+        to step in. There are more than 1300 Superfund sites across the country, and have been linked to increased rates of cancer and other dangers to human health [2]. Currently, nearly one in six Americans live within three miles of a superfund site
+        [3].
+        <br><br>At the University of California, Davis, there is an established group of researchers who have been working with the EPA for the past 31 years to “acquire a better understanding of the human and ecological risks of hazardous substances;
+        and advance the development of new technologies for the cleanup of contaminated sites” [4]. We had the opportunity to join UC Davis researchers on a trip to visit a Native American tribe in northern California who live on heavily polluted land.
+        <br><br><b>Visit with Native American Tribe</b>
+        <br><br>The tribe has reported unusually elevated rates of cancer and miscarriage incidence, and has reason to suspect that the cause may be tied to environmental pollution on their tribal land from local agricultural and forestry corporations.
+        Researchers from UC Davis have been collaborating with the tribe’s scientists and governing council to gather data pertaining to environmental and human health.
+        <br><br> In the United States, recognized Native American tribes are self-governing bodies, and have the power to make and enforce laws and regulations on their own lands. The specific Native American tribe which we visited has expressed their
+        position on genetic engineering in an ordinance adopted in 2015, which may be accessed here [5]. In the ordinance, the tribe makes clear that they view the release of genetically modified organisms into their environment to be a major threat to
+        their cultural values and traditional way of life. Compared to the United States as a whole, which has relatively tolerant laws regarding the production and use of genetically modified organisms, the tribe has far stricter laws.
+        <br><br> Interestingly, within the ordinance, the tribe makes several exceptions. The first is unusual: “Genetically engineered or modified organisms do not include organisms created by traditional selective breeding, [...] or microorganisms created
+        by moving genes or gene segments between unrelated bacteria” [5]. As much of biotechnology and synthetic biology uses bacteria as a host, we were surprised to find that the ordinance deemed the majority of the work done in the iGEM competition
+        as acceptable.
+        <br><br> The ordinance also provides exceptions to the prohibition for “State or federally licensed medical research institutions, medical laboratories, or medical manufacturing facilities engaged in licensed medical production, or medical research
+        involving genetically engineered or genetically modified organisms,” as well as for, “Educational or scientific institutes” [5]. This makes it appear that the major focus of the ordinance is to restrict commercial biotechnology and agriculture
+        firms and their crops/livestock on tribal lands. The ordinance specifically refers to transgenic salmon, which are referred to as a threat, and the significance of the wild salmon to the tribe’s cultural values.
+        <br><br> After consideration, we came to the the conclusion that a device or solution made by an iGEM team with the purpose of being introduced into the environment would be met with strong resistance, and would be unlikely to benefit society
+        if it were never allowed to be used. Also, we considered the stance of the tribe, concerning the introduction of genetically modified organisms as a threat to their cultural values and traditional way of life. While many arguments made by opponents
+        of GMOs focus on perceived threats to human health, which can be settled empirically by careful in vivo studies, cultural arguments cannot be dismissed as easily. A community should have the right to live according their values and uphold traditional
+        ways of life. If certain communities decide that their values are incompatible with the introduction of genetically modified organisms on to their land, then their decision should be respected.
+        <br><br> With our project thus contained within the lab, we considered how best to use synthetic biology to help the tribe and other communities facing similar problems with environmental pollution. The agricultural and forestry corporations in
+        the region surrounding the tribe’s land are currently operating within legal regulations, however the tribe has indicated that these regulations are not as strict as they would like. One example a tribal member provided was that currently, herbicides
+        may be applied within fifty feet of sources of drinking water. A concern is that this distance is not sufficient to prevent contamination of drinking water supplies. A variety of harmful chemicals have been found in the waters of the tribal lands,
+        particularly microcystin toxins and organochlorine pesticides [6]. Analysis of water samples by the Young Lab at UC Davis in 2017 also found the presence of low concentrations of pharmaceuticals, including warfarin, in the waters of the tribal
+        lands.
+        <br><br> If the working hypothesis is found to be supported, that the tribe’s health crises are linked to environmental pollution of their lands and water, then the remedy would be to tighten regulations concerning the use of pesticides, herbicides,
+        and other potentially harmful compounds. If this working hypothesis is not supported by further study, alternative explanations for the tribe’s health crises should be explored, including predisposing genetic factors within the population and
+        other factors.
+        <br><br> To help collect data to support the working hypothesis, and similar projects involving public health and environmental toxicology, we decided to develop a way to easily test what effect low concentrations of potentially harmful chemicals
+        have on the physiological health of cells.
+      </p>
+    </li>
+    <li class="content">
+      <h2>Bioassay Design</h2>
+      <p>We designed a mammalian cell-based bioassay that reports activation of specific stress pathways via fluorescence, for use in environmental toxicology. To do this, we selected transcriptionally regulated target genes which are present in mammalian
+        cells and are involved in stress pathways. We isolated the promoters with transcription factor binding sites from these target genes and coupled them to a fluorescent reporter gene. We selected EGFP, a variant of green fluorescent protein (GFP).
+        GFP is ubiquitous in synthetic biology due to its reliability and ease of measurement [7]. EGFP is derived from GFP, and has been optimized for use in mammalian systems. When a chemical of concern is screened using our assay, it will trigger a
+        specific stress response, and the reporter gene will be expressed, causing the assay to fluoresce. The fluorescence of the assay can be quantitatively measured and analyzed. This assay will provide data on the effect of chemicals of concern on
+        the physiological health of mammalian cells; measurements may be easily taken a range of concentrations, durations of exposure, salinities, pH, temperatures, nutrient availabilities, and other conditions. This also allows for measurement of synergistic
+        or interfering effects due to multiple chemicals of concern present simultaneously.
+        <br><br> We selected 9 promoter constructs derived from 6 target genes (see Figure 2 below) and coupled them to EGFP. This promoter and reporter gene construct was inserted into a plasmid and transfected into two cell lines (see Figure 3 below).
+        The resulting 18 bioassays were exposed to 6 different chemicals of concern at a variety of concentrations and conditions (see Figure 4 below).
+        <br><br> <b>Why not use whole organisms?</b>
+        <br><br> A cell-based approach cannot replace in vivo toxicology studies. However these studies require extensive funding, time, and other resources. By developing a relatively low-cost, cell-based bioassay, preliminary data may be quickly gathered,
+        allowing for more informed decision making as to which in vivo studies are necessary. By using a cell-based preliminary assay, it is our hope that researchers will be able to quickly gather data, make more informed decisions, and save resources.
+        Our cell-based bioassay may also be used to add to the body of knowledge concerning the effect of specific chemicals of concern on the physiological health of mammalian cells and the mechanism of stress.
+        <br><br> <b>Why not use cell-free biochemical assays, such as ELISA?</b>
+        <br><br> Antibody-based assays, such as Enzyme-Linked Immunosorbent Assay (ELISA), have been very successful in biomedical research, environmental toxicology, and other fields [8]. These cell-free methods involve selective binding of a target
+        molecule to a prepared antibody. Such methods are very successful at identifying single, known compounds in an environmental sample, but do not provide any data regarding the effect of the chemical of concern on the health of a living cell. Similarly,
+        the tools of analytical chemistry and organic chemistry may be used to great success when identifying molecules, but do not provide any data regarding the actual effect on a living cell.
+        <br><br> <b>Why use synthetic biology?</b>
+        <br><br> The goal of our bioassay is to create a tool that can be used to better understand the effect on the physiological health of mammalian cells of environmental toxins. An alternative way to achieve this knowledge is to expose cells to the
+        chemicals of concern, lyse the cells, isolate the RNA, and run a quantitative-real-time-reverse-transcript-PCR in order to characterize and quantify the mRNAs present in the cell. However, this approach has limitations. It necessarily involves
+        lysing the cells, and cannot be used to gather real-time data about the behavior of the same cell over time. By using a fluorescent reporter gene, we can measure the induction of the reporter gene over time without lysing cells, and can more easily
+        take a large number of data points across different chemicals of concern, concentrations, and other variables. A fluorescent bioassay also reduces the amount of work required to measure many data points, compared to PCR based methods.
+        <br><br> <b>Why use mammalian cells?</b>
+        <br><br> We chose to use mammalian cells because they make much more accurate models for human health than bacteria or yeast. Furthermore, within the iGEM competition and the field of synthetic biology as a whole, there has been relatively little
+        work with mammalian systems, compared to bacteria, yeast, and algae. Working with mammalian cells brings a variety of new challenges and opportunities to iGEM: they are more difficult and expensive to culture than bacteria, they require specialized
+        equipment and safety training, they can be used to produce proteins suitable for use in human therapeutics (due to similar most-translational modifications), they can be used for more complicated circuits and pathways utilizing spatial/temporal
+        differentiation, and they are much more sensitive to chemicals in the environment (allowing for more sensitive biosensors and bioassays).
+        <br><br> <b>Why not use human cells?</b>
+        <br><br> Although human cell lines would make a superior model for human disease, compared to cell lines derived from hamsters and mice, for our project we chose not to use human cells. Work involving human cells requires specialized facilities,
+        equipment, resources, and safety training. Human cells require a BSL-2 lab, which would have been more difficult for our team to use than our regular wetlab space, which is BSL-1. Additionally, as our project took place in the context of the iGEM
+        competition, we wanted for other teams to be able to easily reproduce our findings and expand them. By using human cell lines, many teams which lack access to a BSL-2 lab, would have had more difficulty in expanding upon our project. It would
+        be relatively straightforward to insert our genetic constructs to a human cell line, and this presents an opportunity to extend our project.
+      </p>
+    </li>
+    <li class="content">
+      <h2>Promoter Constructs</h2>
+      <p></p>
+    </li>
+    <li class="content">
+      <h2>Chemicals of Concern</h2>
+      <p></p>
+    </li>
+    <li class="content">
+      <h2>Host Strains</h2>
+      <p></p>
+    </li>
+    <li class="content">
+      <h2>References</h2>
+      <p>[1] “About EPA.” EPA, Environmental Protection Agency, 7 July 2018, www.epa.gov/aboutepa.
+<br><br>[2] Johnson, David. “Superfund Sites: 1,317 US Spots Where Toxic Waste Was Dumped.” Time, Time Inc, 22 Mar. 2017, time.com/4695109/superfund-sites-toxic-waste-locations/.
+<br><br>[3] Voosen, P. (2018). Wasteland. [online] Nationalgeographic.com. Available at: https://www.nationalgeographic.com/magazine/2014/12/superfund/ [Accessed 1 Aug. 2018].
+<br><br>[4] "UC Davis Superfund Research Program". UC Davis Superfund Research Program, 2018, https://www.superfund.ucdavis.edu/. Accessed 1 Aug 2018.
+<br><br>[5] “Ch. 21.15 Genetically Engineered Organisms | Yurok Tribal Code.” Yurok Tribe Tribal Code, Yurok Tribe, 10 Dec. 2015, yurok.tribal.codes/YTC/21.15.
+<br><br>[6] Eagles-Smith, C.A., and B.L. Johnson, 2012, Contaminants in the Klamath Basin: Historical patterns, current distribution, and data gap identification: U.S. Geological Survey Administrative Report, 88 p.
+<br><br>[7] “PDB101: Molecule of the Month: Green Fluorescent Protein (GFP).” PDB-101, RCSB PDB, June 2003, pdb101.rcsb.org/motm/42.
+<br><br>[8] Enzyme Immunoassay (EIA)/Enzyme-Linked Immunosorbent Assay (ELISA)
+Rudolf M. Lequin
+Clinical Chemistry Dec 2005, 51 (12) 2415-2418; DOI: 10.1373/clinchem.2005.051532
+<br><br>[9] Larochelle, Olivier & Labbé, Simon & Harrisson, Jean-François & Simard, Carl & Tremblay, Véronique & St-Gelais, Geneviève & Govindan, Manjapra Variath & Seguin, Carl. (2008). Nuclear Factor-1 and Metal Transcription Factor-1 Synergistically Activate the Mouse Metallothionein-1 Gene in Response to Metal Ions. The Journal of biological chemistry. 283. 8190-201. 10.1074/jbc.M800640200.
+<br><br>[10] Santos, Anderson K. et al. "Expression System Based On An Mtiia Promoter To Produce Hpsa In Mammalian Cell Cultures". Frontiers In Microbiology, vol 7, 2016. Frontiers Media SA, doi:10.3389/fmicb.2016.01280.
+<br><br>[11]  Li, Shuaizhang et al. "Functional Analysis Of The Dioxin Response Elements (Dres) Of The Murine CYP1A1 Gene Promoter: Beyond The Core DRE Sequence". International Journal Of Molecular Sciences, vol 15, no. 4, 2014, pp. 6475-6487. MDPI AG, doi:10.3390/ijms15046475.
+<br><br>[12] F.G. Schaap, A.E. Kremer, W.H. Lamers, P.L. Jansen, I.C. Gaemers. Fibroblast growth factor 21 is induced by endoplasmic reticulum stress
+Biochimie, 95 (2013), pp. 692-699, 10.1016/j.biochi.2012.10.019
+<br><br>[13]  Li, Dahui et al. "Genotoxic Evaluation Of The Insecticide Endosulfan Based On The Induced GADD153-GFP Reporter Gene Expression". Environmental Monitoring And Assessment, vol 176, no. 1-4, 2010, pp. 251-258. Springer Nature, doi:10.1007/s10661-010-1580-7.
+<br><br>[14]  Park, Jong Sung et al. "Isolation, Characterization And Chromosomal Localization Of The Human GADD153 Gene". Gene, vol 116, no. 2, 1992, pp. 259-267. Elsevier BV, doi:10.1016/0378-1119(92)90523-r.
+<br><br>[15] Mitra, Sumegha et al. "Gadd45a Promoter Regulation By A Functional Genetic Variant Associated With Acute Lung Injury". Plos ONE, vol 9, no. 6, 2014, p. e100169. Public Library Of Science (Plos), doi:10.1371/journal.pone.0100169.
+<br><br>[16] Cell line available from ATCC at: https://www.atcc.org/Products/All/CRL-9096.aspx
+<br><br>[17] Cell line available from ATCC at: https://www.atcc.org/products/all/CRL-2254.aspx
+</p>
+    </li>
+  </ul>
+
 </html>
+{{Template: UC_Davis/footer}}
