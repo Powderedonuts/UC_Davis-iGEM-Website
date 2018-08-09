@@ -1,0 +1,264 @@
+<html>
+<head>
+  <title>iGEM</title>
+</head>
+<style>
+  /*------------Get rid of iGEM stuff----------------------------------*/
+
+  #home_logo,
+  #sideMenu {
+    display: none;
+  }
+
+  #sideMenu,
+  #top_title,
+  .patrollink {
+    display: none;
+  }
+
+  #content {
+    margin-left: 0px;
+    margin-top: -7px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  /*-------------------------------------------------------------------*/
+
+/*----------------------Header Styling-------------------------*/
+
+
+
+/**/
+#topnav {
+display: flex;
+justify-content: center;
+background-color: #002855;
+margin: 0;
+list-style: none;
+padding: 40px;
+
+}
+#topnav div, a {
+  text-decoration: none;
+}
+#topnav .nav-item:visited {
+  color: white;
+}
+#topnav .b-nav-item:visited {
+  color: #525b65;
+}
+.dropdown {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.dropdown-main,
+.nav-item {
+  font-size: 15px;
+  color: white;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 200px;
+border-radius: 7px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+float: none;
+font-size: 14px;
+color: #525b65;
+padding: 12px 16px;
+display: block;
+text-align:left;
+}
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.dropdown-content a:hover {
+color: black;
+}
+
+/*-----------Burger Menu Styling-------------*/
+
+#topnav .burger {
+  display: none;
+  margin-right: 20px;
+  color: #d9a900;
+  font-size: 18px;
+}
+
+.burger-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border-radius: 7px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 200px;
+  margin-left: -200px;
+
+}
+
+.b-dropdown-main {
+font-weight: bold;
+font-size: 15px;
+color: #525b65;
+padding: 12px 16px;
+display: block;
+text-align: left;
+overflow: hidden;
+}
+.b-dropdown-content {
+  display: none;
+  position: block;
+  color: #525b65;
+  padding: 12px;
+}
+.b-dropdown-content a {
+  display: block;
+  padding: 5px;
+  color: #525b65;
+  font-weight: normal;
+  font-size: 14px;
+
+}
+#topnav .b-dropdown:hover .b-dropdown-content {
+  display: block;
+}
+#topnav .b-dropdown-content a:hover {
+  color: black;
+}
+#topnav .b-dropdown-content a:visited {
+  color: black;
+}
+
+input[type=checkbox]{
+  display: none;
+}
+input[type=checkbox]:checked ~ .burger-content {
+  display: block;
+}
+
+@media screen and (max-width:720px) {
+  #topnav li {
+    display: none;
+  }
+  #topnav {
+    justify-content: flex-end;
+  }
+
+  #topnav li.burger {
+    display: block;
+  }
+}
+
+</style>
+<body>
+  <!--______________Top Navigation Bar_________________________-->
+	<ul = id="topnav">
+		<li class="dropdown"><a href="PROJECT" class="dropdown-main">PROJECT</a>
+			<div class="dropdown-content">
+        <a href="#">Design</a>
+        <a href="#">Results</a>
+        <a href="#">Modelling</a>
+        <a href="#">InterLab</a>
+			</div>
+		</li>
+		<li class="dropdown"><a href="Human-Resources" class="dropdown-main">HUMAN RESOURCES</a>
+			<div class="dropdown-content">
+        <a href="#">Motivation</a>
+        <a href="#">Outreach</a>
+        <a href="#">Policy</a>
+			</div>
+		</li>
+		<li class="dropdown"><a href="Parts" class="dropdown-main">PARTS</a>
+			<div class="dropdown-content">
+        <a href="#">Basic</a>
+        <a href="#">Composite</a>
+        <a href="#">Parts Collection</a>
+			</div>
+		</li>
+    <li class="navlogo"><img src="" alt=""></li>
+		<li class="dropdown"><a href="Lab" class="dropdown-main">LAB WORK</a>
+			<div class="dropdown-content">
+        <a href="#">Notebook</a>
+        <a href="#">Methods and Materials</a>
+        <a href="#">Safety</a>
+			</div>
+		</li>
+		<li class="dropdown"><a href="Team" class="nav-item">TEAM</a>
+      <div class="dropdown-content">
+        <a href="#">Meet the Team</a>
+        <a href="#">Advisors</a>
+        <a href="#">Sposors</a>
+			</div>
+  </li>
+  <li class="dropdown"><a href="Achievements" class="nav-item">ACHIEVEMENTS</a>
+    <div class="dropdown-content">
+      <a href="#">Medal Requirements</a>
+      <a href="#">Outreach</a>
+    </div>
+</li>
+
+	<!--___________________________________Burger Menu____________________________________________-->
+		<li class="burger"><input type="checkbox" id="b-control"><label for="b-control">&#9776;</label>
+			<div class="burger-content">
+				<div class="b-dropdown"><a href="PROJECT" class="b-dropdown-main">Project</a>
+					<div class="b-dropdown-content">
+            <a href="#">Design</a>
+            <a href="#">Results</a>
+            <a href="#">Modelling</a>
+            <a href="#">InterLab</a>
+					</div>
+				</div>
+				<div class="b-dropdown"><a href="Human-Resources" class="b-dropdown-main">Human Resources</a>
+					<div class="b-dropdown-content">
+            <a href="#">Motivation</a>
+            <a href="#">Outreach</a>
+            <a href="#">Policy</a>
+					</div>
+				</div>
+				<div class="b-dropdown"><a href="Parts" class="b-dropdown-main">Parts</a>
+					<div class="b-dropdown-content">
+            <a href="#">Basic</a>
+            <a href="#">Composite</a>
+            <a href="#">Parts Collection</a>
+					</div>
+				</div>
+				<div class="b-dropdown"><a href="Lab" class="b-dropdown-main">Lab Work</a>
+					<div class="b-dropdown-content">
+            <a href="#">Notebook</a>
+            <a href="#">Methods and Materials</a>
+            <a href="#">Safety</a>
+					</div>
+				</div>
+        <div class="b-dropdown"><a href="Team" class="b-dropdown-main">Team</a>
+					<div class="b-dropdown-content">
+            <a href="#">Meet the Team</a>
+            <a href="#">Advisors</a>
+            <a href="#">Sposors</a>
+					</div>
+				</div>
+        <div class="b-dropdown"><a href="Achievements" class="b-dropdown-main">Achievements</a>
+					<div class="b-dropdown-content">
+            <a href="#">Medal Requirements</a>
+            <a href="#">Outreach</a>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<!--__________________________________________________________________________________________-->
+
+	<!--______________________________________________________________________________-->
+
+</body>
+
+
+</html>
